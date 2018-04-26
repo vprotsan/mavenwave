@@ -1,0 +1,118 @@
+html {
+    min-height: 100%;
+}
+
+body.mw {
+    background: url('../images/bg.png') no-repeat 79% 100%; 
+    font-family: 'Montserrat', sans-serif;
+    color: #5c5c5c;
+
+    .need-help {
+        display: block;
+        padding: 1em 0 2em;
+        color: #555555;
+        text-align: center;
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 43px;
+        font-weight: 800;
+        line-height: 53px;
+
+        @include mq(tablet-wide){
+            font-size: 53px;
+        }
+
+        span {
+            color: #ff851c;
+        }
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        color: #727272;
+        margin: 26px 0 32px;
+        line-height: 1.4;
+    }
+
+    form {
+        display: block;
+        width: 80%;
+        margin: 76px auto 0;
+
+        @include mq(tablet-wide){
+            margin: 76px auto 0;
+            width: 960px;
+        }
+
+        @include mq(sm-comp){
+            margin: 76px auto 0;
+            width: 960px;
+        }
+
+        input{
+            display: block;
+            border: 2px solid #c6c6c6;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 15px;
+            padding: 15px;
+            margin: 18px 0;
+            width: 100%;
+
+            @include mq(tablet-wide){
+                width: 50%;
+                min-width: 382px
+            }
+
+            &:focus {
+                outline: #cc5f01 auto 2px;
+            }
+        }
+
+        input[type="submit"]{
+            color: #ffffff;
+            cursor: pointer;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fd831b+0,cc5f01+100 */
+            background: #fd831b; /* Old browsers */
+            background: -moz-linear-gradient(top, #fd831b 0%, #cc5f01 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #fd831b 0%,#cc5f01 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #fd831b 0%,#cc5f01 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd831b', endColorstr='#cc5f01',GradientType=0 ); /* IE6-9 */
+            padding: 17px;
+            letter-spacing: 0.2px;
+            width: 100%;
+            transition: all 0.4s ease-out;
+
+            &:hover {
+                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ed6c09+0,b55b01+100 */
+                background: #ed6c09; /* Old browsers */
+                background: -moz-linear-gradient(top, #ed6c09 0%, #b55b01 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #ed6c09 0%,#b55b01 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #ed6c09 0%,#b55b01 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed6c09', endColorstr='#b55b01',GradientType=0 ); /* IE6-9 */
+            }
+
+            &.disabled {
+                cursor: none;
+                color: #cccccc;
+                background: #989898;
+                pointer-events: none;
+            }
+
+            @include mq(tablet-wide){
+                 width: 50%;
+            }
+        }
+
+        @include placeholder {
+            color:#aaaaaa;
+            letter-spacing: 0.2px;
+        }
+    }
+}
